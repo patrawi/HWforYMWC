@@ -1,0 +1,94 @@
+.icon {
+    font-family: FontAwesome;
+    content: "\f002";
+    
+}
+
+.expandbutton {
+    width: 100%;
+    text-align: left;
+}
+
+.location {
+    font-family: FontAwesome;
+    content: "\f3c5";
+}
+
+body {
+    background-image: url(./image/bg.png);
+    background-position: center
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+.imgshop {
+    width: 250px;
+    height: 250px;
+    padding: 0.25em;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.fa option {
+
+    font-weight: 900;
+}
+
+
+
+.cardicon {
+  width: 5%;
+}
+
+
+.bahtopa {
+    opacity: 50%;
+}
+
+.bahticon {
+    width: 2%;
+    
+}
+
+
+
+@media screen and (max-width: 770px) {
+    .topbar {
+        display: none;
+    }
+    .longimg {
+        display: none;
+    }
+    .mainbar {
+        display: none;
+    }
+    .imgshop {
+        width: 100%;
+        height: auto;
+    }
+    
+}
