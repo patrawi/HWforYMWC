@@ -1,3 +1,4 @@
+
 .icon {
     font-family: FontAwesome;
     content: "\f002";
@@ -53,9 +54,22 @@ body {
     cursor: pointer;
 }
 
-.fa option {
-
+.fa{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 15em;
+    height: 30px;
     font-weight: 900;
+    font-size: 30px;
+    transform: translate(-50%, -50%);
+    padding-left: 10px;
+    border: 2px solid;
+    -webkit-appearance: none;
+}
+
+.fa:hover {
+    cursor: pointer;
 }
 
 
@@ -74,7 +88,9 @@ body {
     
 }
 
-
+.location {
+    background-image: url('./image/pin.png');
+}
 
 @media screen and (max-width: 770px) {
     .topbar {
@@ -91,4 +107,15 @@ body {
         height: auto;
     }
     
+}
+@media screen and (max-width: 1020px) {
+   .column {
+       flex-direction: column;
+      
+   }
+   .imgmid {
+       
+       height: auto;
+   }
+
 }

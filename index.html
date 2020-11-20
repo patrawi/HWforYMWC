@@ -13,7 +13,30 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ef6e45c1a1.js" crossorigin="anonymous"></script>
     
-    
+<style>
+    @font-face {
+    font-family: "Bold";
+    src: url('./font/IBMPlexSansThai-Bold.woff2');
+}
+    @font-face {
+        font-family: "Semibold";
+        src: url('./font/IBMPlexSansThai-SemiBold.woff2');
+    }
+    @font-face {
+        font-family: 'Regular';
+        src: url('./font/IBMPlexSansThai-Regular.woff2');
+    }
+    .regular {
+        font-family: "Regular";
+    }
+    .semibold {
+        font-family: "Semibold";
+    }
+    .bold {
+        font-family: "Bold";
+    }
+
+</style> 
 
 </head>
 <body>
@@ -34,7 +57,7 @@
                         <div class = "col-11 ml-3 my-1">
                             <form action="">
                                 <div class = "input-group">
-                                    <a class="input-group-text  dropdown-toggle bg-light text-decoration-none  topbar  rounded-right rounded-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" >
+                                    <a class="regular input-group-text  dropdown-toggle bg-light text-decoration-none  topbar  rounded-right rounded-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" >
                                         <i class="material-icons">&#xe0c8;</i>
                                         พื้นที่ใกล้ฉัน
                                       
@@ -44,7 +67,7 @@
                                         <li><a class="dropdown-item" href="#">Another action</a></li>
                                         
                                     </ul>
-                                    <input type="text" class="form-control" placeholder="ค้นหา ชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านค้า OTOP และสินค้าทั่วไป" aria-label="Username" aria-describedby="basic-addon1" >
+                                    <input type="text" class="form-control regular" placeholder="ค้นหา ชื่อ ร้านอาหาร และเครื่องดื่ม ร้านธงฟ้า ร้านค้า OTOP และสินค้าทั่วไป" aria-label="Username" aria-describedby="basic-addon1" >
                                     <a class="input-group-text  bg-light text-decoration-none  "data-icon = "search" href="#"  role="button" data-toggle="dropdown" aria-expanded="false">
                                         <span class = "pl-2 pr-2 mb-1">
                                             <svg width="0.75em" height="0.75em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -68,20 +91,20 @@
         <div class="container-md flex justify-content-start  ">
                 <a class="nav-link   text-decoration-underline text-white fs-6" aria-current="page" href="#">หน้าแรก</a>
                 <span class = "text-white fs-6">/</span>
-                <a class="nav-link text-white fs-6" aria-current="page" href="#">ค้นหา</a>
+                <a class="nav-link text-white fs-6 semibold" aria-current="page" href="#">ค้นหา</a>
         </div>       
     </nav>
-    <div class = "text-dark-50 fs-5 p-3 fw-bold mb-5">ผลการค้นหา ร้านอาหารและเครื่องดื่ม ทั้งหมด</div>
+    <div class = "text-dark-50 fs-5 p-3 fw-bold mb-5 bold">ผลการค้นหา ร้านอาหารและเครื่องดื่ม ทั้งหมด</div>
         <div class = "container-fluid">
-            <div class="row">
-                <div class = "col-md-6  col-lg-3 longimg">
+            <div class="row" id = "">
+                <div class = "col-md-5 col-lg-3 col-xl-3 longimg">
                     <div class="card border-secondary mb-3 " >
                         <div class = "mb-2">
-                            <div class="fs-6 p-3 fw-bold">ประเภทร้านค้า</div>
+                            <div class="fs-6 p-3 fw-bold semibold">ประเภทร้านค้า</div>
                             <div class="card-body text-dark" id = "shop">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="type" id="flexRadioDefault1">
-                                    <label class="form-check-label pointer" for="flexRadioDefault1">
+                                    <label class="form-check-label pointer regular" for="flexRadioDefault1">
                                     ทั้งหมด 
                                     </label>
                                 </div>
@@ -89,11 +112,13 @@
                             </div>
                         </div>
                         <div class = "mb-2 p-3">
-                            <div class="fs-6  fw-bold mb-3">จังหวัด/ใกล้ฉัน</div>
+                            <div class="fs-6  fw-bold mb-3 semibold">จังหวัด/ใกล้ฉัน</div>
                             <div>
+                               
                                 <select class="form-select " aria-label="Default select example">
-                                    <option selected class = "material-icons">
-                                      &#xe0c8; พื้นที่ใกล้ฉัน</option>
+                                    
+                                    <option class = "material-icons"  >
+                                       &#x1F4CD; พื้นที่ใกล้ฉัน</option>
                                      <option value="1">One</option>
                                      <option value="2">Two</option>
                                      <option value="3">Three</option>
@@ -102,16 +127,16 @@
                             </div>
                         </div>
                         <div class = "mb-2 p-3">
-                            <div class="fs-6  fw-bold mb-3">ราคา</div>
-                            <select class="form-select text-muted" aria-label="Default select example" id = "optionprice">
+                            <div class="fs-6  fw-bold mb-3 semibold">ราคา</div>
+                            <select class="form-select text-muted regular" aria-label="Default select example" id = "optionprice">
                                 <option selected>
                                     กรุณาเลือก </option>
                             </select>
                         </div>
                         <div class = "mb-2">
-                            <div class="fs-6 p-3 fw-bold">ประเภทร้านค้าและเครื่องดื่ม</div>
+                            <div class="fs-6 p-3 fw-bold semibold">ประเภทร้านค้าและเครื่องดื่ม</div>
                             <div class="card-body text-dark" id = "subcategories">
-                                <div class="form-check">
+                                <div class="form-check regular">
                                     <input class="form-check-input " type="radio" name="shopanddrink" id="flexRadioDefault1">
                                     <label class="form-check-label " for="flexRadioDefault1">
                                     ทั้งหมด 
@@ -122,7 +147,7 @@
                         </div>
                     </div> 
                 </div>
-                <div class="col-md-6 col-lg-8 col-xl-9" >
+                <div class="col-md-7 col-lg-8 col-xl-9" >
                     <div id = "card">
                       
                     </div>

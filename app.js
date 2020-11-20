@@ -52,6 +52,7 @@ const card = getjson().then(async res => {
 function getoption(type,id) {
     for (let i =0;i < type.length; i++) {
         let option = document.createElement('option');
+        option.classList.add('regular')
         option.setAttribute('value', type[i]);
         option.innerText = type[i];
         id.appendChild(option);
@@ -66,8 +67,8 @@ function getselect(type,id) {
         let choiceinput = document.createElement('input');
         let choicelabel = document.createElement('label');
         choicediv.classList.add('form-check');
-        choiceinput.classList.add('form-check-input',"fs-6");
-        choicelabel.classList.add('form-check-label','pointer');
+        choiceinput.classList.add('form-check-input',"fs-6",'regular');
+        choicelabel.classList.add('form-check-label','pointer','regular');
         choiceinput.setAttribute('type', 'radio')
         choiceinput.setAttribute('name','type');
        
@@ -108,15 +109,15 @@ function getCard(type, id) {
         let spanbut = document.createElement('span');
 
         choicecard.classList.add('card', 'mb-3');
-        choicerow.classList.add('row');
-        choiceimg.classList.add('col-md-2', 'mr-3');
-        image.classList.add('imgshop');
-        choicebodycard.classList.add('col-md-9','ml-5')
-        choicetitle.classList.add("card-title");
-        choicecardbody.classList.add('card-body');
-        cardtext.classList.add('card-text', 'text-muted');
-        hlcardtext.classList.add('card-text', 'text-muted');
-        rccardtext.classList.add('card-text', 'text-muted');
+        choicerow.classList.add('row','column');
+        choiceimg.classList.add('col-md-4','col-lg-3','col-xl-2');
+        image.classList.add('imgshop','imgmid');
+        choicebodycard.classList.add('col-md-8','col-lg-8','col-xl-8')
+        choicetitle.classList.add("card-title",'bold');
+        choicecardbody.classList.add('card-body', 'text-wrap', 'text-break');
+        cardtext.classList.add('card-text', 'text-muted','regular');
+        hlcardtext.classList.add('card-text', 'text-muted','regular');
+        rccardtext.classList.add('card-text', 'text-muted','regular');
         
         
        
